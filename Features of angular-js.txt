@@ -1,0 +1,37 @@
+
+!!!!!!!!!!.........INTRODUCTION OF ANGULAR ................!!!!!!!!!!!!!!
+
+Angular is a framework for developing client application in HTML and 
+ -using Typescript language that complies to js 
+Angular is a framework that makes it easy to develop web application
+Angular support both web and mobile application
+Angular application code is written using Typescript language
+
+
+***************************
+Features of angular-js
+
+
+written in js
+uses js for coding application
+used for developing rich client frontend web application
+it is MVC based 
+support both one way and two way data binding 
+
+
+*************************
+SPA 
+
+Angular Js   -- js             controller   ng- model 
+Angular      -- Typescript     component    *ng-model
+
+********************************
+
+What is Typescript(TS) 
+
+-- Typescript is Super set of js as as it is evoled from Js
+-- it was designed by Microsoft in the year 2012
+-- Typescript is an object-oriented programming(OOPS) language that.
+-- it is strongly typed language that support type checking.
+-- it extends the functionality of js by adding datatype class that support abstraction encapsulation, 
+     inheritance and polymorphism and interfaces etc... arrow function, callback function
