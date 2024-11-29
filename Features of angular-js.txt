@@ -8,7 +8,7 @@ Angular support both web and mobile application
 Angular application code is written using Typescript language
 
 
-***************************
+************!!!!!!!!!!!!!!!***************
 Features of angular-js
 
 
@@ -19,13 +19,13 @@ it is MVC based
 support both one way and two way data binding 
 
 
-*************************
+*************!!!!!!!!!!!!************
 SPA 
 
 Angular Js   -- js             controller   ng- model 
 Angular      -- Typescript     component    *ng-model
 
-********************************
+*****************!!!!!!!!!!!!!!!!***************
 
 What is Typescript(TS) 
 
@@ -35,3 +35,55 @@ What is Typescript(TS)
 -- it is strongly typed language that support type checking.
 -- it extends the functionality of js by adding datatype class that support abstraction encapsulation, 
      inheritance and polymorphism and interfaces etc... arrow function, callback function
+
+
+*****************!!!!!!!!!!!**************
+
+Command
+
+- npm command provided by node.js  
+    > npm install -g typescript  : to install typescript
+    > tsc -v  : to check version 
+    > npm install -g @angular/cli  : to install anguler
+    > ng v : angular version
+    > ng new <projectname> : to create new project
+
+*****************************!!!!!!!!!!!!***************
+
+INTRODUCTION OF Typescript
+
+
+ts is an open-source object-oriented programming language
+it si developed and maintained by Microsoft
+it was designed by ANDERS
+it was released in 2012
+it is a superset of js
+it is a statically typed language
+it is a compiled language
+
+
+**************************
+
+DATA in TS
+
+Type of data    Date type in ts
+
+Number              number
+Boolean             boolean
+String              string
+Void                void
+Any                 any  ----> if var is declared with any data-type then any type of value can be assigned to that variable
+Null                null
+Undefined           undefined  ----> value given to uninitialzes same as js 
+
+
+
+******************
+
+var and let are used to declare variables.
+var is function-scoped and global-scoped.
+let is block-scoped (local).
+
+
+*************************************************************************************************
+
