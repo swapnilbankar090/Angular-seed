@@ -1,0 +1,53 @@
+Angluar=
+   command 
+   ng 
+
+    project create for create project 
+    --ng new <projectname>  : to create new project
+
+    select css
+    
+    after successfully create project select the project == cd <projectname>
+    eg.
+        --ng new angularproject1
+        --cd angularproject1
+    and run project
+        ----ng serve
+
+***************************************************************
+**  Angular Project Structure  **
+
+***************************************************************
+
+Components
+    Components are the most basic building block of an UI in an Angular application.
+    An Angular application ia a tree of Angluar Components.
+    Every angular Components is written as a class.
+    Every Angular application has one start-up component-root component named AppComponent.
+    AppComonent's code is available app.components.ts file.
+
+    The @Component{{}} decorator is applied to the component class
+    To apply this decorator the component interface is imported from the core lib of angular
+    The import {Component} from '@angular/core
+
+
+    *************************************************
+ Every component has typically four files associated with it.
+    1. app.component.ts  file
+    2. app.component.html file
+    3. app.component.css file
+    4. app.component.spec.ts file
+
+ app is component name we change the name then file name will be
+    eg. if we change the name to mycomponent then file name will be
+    1.mycomponent.component.ts,
+    2.mycomponent.component.html,
+    3.mycomponent.component.css,
+    4.mycomponent.component.spec.ts    
+
+    *************************************************
+
+    create new Component
+    command is 
+     ng generate component FirstComponent  or
+     ng g c FirstComponent
