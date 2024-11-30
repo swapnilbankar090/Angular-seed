@@ -1,13 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TABLE</title>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+            align-items: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
-    <h1> Swapnil Bankar create the first-component <br> <p>first-component works!</p></h1>
+    <table style="width: 70%;">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>{{name}}</td>
+            <td>{{lname}}</td>
+            <td>{{age}}</td>
+        </tr>
+        <tr>
+            <td>Arun</td>
+            <td>Singh</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Sam</td>
+            <td>Watson</td>
+            <td>41</td>
+        </tr>
+    </table>
+    <div><h1> {{name}} </h1></div>
 </body>
 </html>

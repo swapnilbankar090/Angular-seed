@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './first-component.component.css'
 })
 export class FirstComponentComponent {
+  name:string="swapnil"
+  lname:string="bankar"
+  age:number=24
 
 }
