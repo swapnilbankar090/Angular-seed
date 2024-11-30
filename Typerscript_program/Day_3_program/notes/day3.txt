@@ -1,0 +1,39 @@
+
+
+arrow function:-> 
+    arrow function is function which have does not have name it calles as  anynosums function
+    It is also called a Lambda function.
+    it does interface with java
+    it is denoted buy "=()=>{}"
+
+
+    Arrow function without parameter
+    eg.
+    let studName = "ABC"
+    let studDetails=()=>{
+        return "student Name ="+studName
+    }
+
+    console.log(studDetails())
+
+    **********************************************
+    Arrow function with parameter
+    eg.
+    The following program is an example of arrow function with parameters.
+
+    let sum = (a: number, b: number): number => {  
+                return a + b;  
+    }  
+    console.log(sum(20, 30)); //returns 50 
+
+
+Interface in typescript
+    An interface is a keyword which is used to declare a TypeScript Interface.
+    An interface_name is the name of the interface.
+    An interface body contains variables and methods declarations.
+    
+
+
+
+
+     
