@@ -1,0 +1,50 @@
+<p>second works!</p>
+
+<table border="2">
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>K1</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>K2</td>
+        <td>3</td>
+    </tr>
+</table>
+
+{{message}} <!-- interpolation -->
+<br/>{{p1.prodId}}
+{{p1.prodName}}
+{{p1.price}}
+<br/>{{p1.displayData()}}
+
+<div [ngStyle]="{color:changeColor}">Angular NgStyle Demo</div>
+<div [ngClass]="['divColor','textChange']">Angular NgClass Demo</div>
+
+<input type="text" [placeholder]="txt">
+
+<div style="color: green; margin-left: 175px; font-weight: bold;">WorkShops List</div>
+<table border="2">
+    <tr [ngClass]="['tableheading']">
+        <th>Sr.No</th>
+        <th>CourseName</th>
+        <th>Technology</th>
+        <th>Fees</th>
+        <th>PendingFees</th>
+        <th>Duration</th>
+    </tr>
+    <tr *ngFor="let workshop of workshops; let i=index" [ngClass]="['tablerows']">
+        <td>{{i+1}}</td>
+        <td>{{workshop.name}}</td>
+        <td>{{workshop.technology}}</td>
+        <td>{{workshop.fees}}</td>
+        <td *ngIf="workshop.pendingFees>0; else ElseTd" [ngClass]="['highlight']">{{workshop.pendingFees}}</td>
+        <ng-template #ElseTd>
+            <td>{{workshop.pendingFees}}</td>
+        </ng-template>
+        <td>{{workshop.duration}}</td>
+    </tr>
+</table>

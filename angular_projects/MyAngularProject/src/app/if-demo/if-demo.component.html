@@ -1,0 +1,48 @@
+<p>if-demo works!</p>
+{{show}}
+
+<div *ngIf="show; else ElseDiv">
+    {{message}}
+    <h3 class="redcolor">{{heading1}}</h3>
+</div>
+<ng-template #ElseDiv>
+    <div>
+        Else block
+        <h3 class="bluecolor">{{heading2}}</h3>
+    </div>
+</ng-template>
+
+<ul>
+    <li *ngFor="let sub of subjects">{{sub}}</li>
+</ul>
+
+Students:
+<ul>
+    <li *ngFor="let student of students; let i=index">{{i+1}}. {{student.displayData()}}</li>
+</ul>
+<hr>
+<ul [ngSwitch]="'USA'">
+    <li *ngSwitchCase="'USA'">United States of America</li>
+    <li *ngSwitchCase="'IND'">India</li>
+    <li *ngSwitchDefault>Select correct CountryCode</li>
+</ul>
+
+Orders:
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Delivery Country</th>
+        <th>Order From</th>
+    </tr>
+    <tr *ngFor="let order of orders" [ngSwitch]="order.orderStatus">
+        <td>{{order.orderId}}</td>
+        <td>{{order.orderDate.toLocaleDateString('en-US',{dateStyle:'short'})}}</td>
+        <td *ngSwitchCase="'pending'" class="redcolor">{{order.orderStatus}}</td>
+        <td *ngSwitchCase="'delivered'" class="greencolor">{{order.orderStatus}}</td>
+        <td *ngSwitchCase="'on the way'" class="bluecolor">{{order.orderStatus}}</td>
+        <td>{{order.deliveryCountry}}</td>
+        <td>{{order.orderFrom}}</td>
+    </tr>
+</table>

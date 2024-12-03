@@ -1,0 +1,23 @@
+.divColor{
+    color:blue;
+}
+
+.textChange{
+    text-decoration: line-through;
+}
+
+.highlight{
+    background-color: #ffff00;
+}
+
+.tablerows:nth-child(even){
+    background-color: pink;
+}
+
+.tablerows:nth-child(odd){
+    background-color: yellowgreen;
+}
+
+.tableheading{
+    background-color: antiquewhite;
+}
