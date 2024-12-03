@@ -1,4 +1,15 @@
 Angluar=
+
+
+While creating project their are two option 
+   1. standalone true
+   2. standalone false
+
+   if we choose standalone true we do not have to import component directly  import in that file
+   if we choose standalone false we have to import component directly in app.module.ts file
+
+
+
    command 
    ng 
 
@@ -62,4 +73,21 @@ Components
    pipes are a way to format, filter and manipulate data without modifying the underlying data source
    they accept an input an input value, process and return a tranformed value as the output.
 
+   generate new pipe/ above to component
+
+   ng g p <name>
+
+   · Steps to create a custom pipe:
+    · Use AngularCLI command to scaffold custom pipe class
+    · ng g pipe <nameofthepipe>
+    · This creates a TypeScript Class with an export keyword.
+    · Decorated with the @pipe decorator and has the name property that defiṋes the name of the pipe.
+    · It implements the PipeTransform interface.
+    · Implement the transform method of the interface. This method code is actually responsible for data transformation
+    · Return the transformed data with the pipe.
+    · Use the above pipe in the template markup
+
+What is $event?
+   DOM Event carries the event parload .i.e the information about the event 
+   This event payload can be accessed by using $event as an argument to the handler funtion.
 

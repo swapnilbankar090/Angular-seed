@@ -1,0 +1,24 @@
+<p>event-binding-demo works!</p>
+
+
+<div>
+    <h3>event event-binding-demo </h3>
+
+    <button (click)="DisplayMessage()"> Hit it !!!!!!!</button>
+    <br><br>
+    <p style="color:rgb(255, 0, 0)">{{result}}</p>
+
+</div>
+
+<div>
+    <input type="text" name="FirstName" #fnm placeholder="Enter name"><br>
+    <input type="text" name="LastName" #lnm placeholder="Enter Lastname"><br>
+
+    <button (click)="DisplayDetails(fnm.value,lnm.value)"> Click me</button>
+    <p style="color: rgb(38, 0, 255);">{{x}}</p>
+</div>
+
+<div>
+    <input [value]="var1" (input)="handeInput ($event)">
+    <p>Enter value = {{var1}}</p>
+</div>
