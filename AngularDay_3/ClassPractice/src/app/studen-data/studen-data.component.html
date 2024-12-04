@@ -1,0 +1,30 @@
+<p>studen-data works!</p>
+
+<table border="1" style="width: 100%; text-align: left;">
+    <thead>
+        <tr>
+            <th>RegNo</th>
+            <th>Full Name</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Degree</th>
+            <th>Percentage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{ student.regNo }}</td>
+            <td>{{ student.fullName | titlecase }}</td>
+            <td>{{ student.birthDate | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ student.gender | titlecase }}</td>
+            <td>{{ student.degree | uppercase }}</td>
+            <td>{{ student.percentage | number: '1.2-2' }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>{{ 'swapnil' | welcome }}</p>
+
+
+<p>{{ 2 | power: 3 }}</p> 
+<p>{{ 5 | power: 2 }}</p>

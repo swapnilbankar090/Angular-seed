@@ -91,3 +91,29 @@ What is $event?
    DOM Event carries the event parload .i.e the information about the event 
    This event payload can be accessed by using $event as an argument to the handler funtion.
 
+*****************************************************
+4/12/24
+
+for communication between 2 component we use @Input and @Output   
+   @Input is used to get data from parent to child component
+   @Output is used to get data from child to parent component
+   in ts file variable shown in html file
+
+Custom directives
+   Custom directives are a way to extend the functionality of HTML elements in Angular.
+   command:- ng g d customdirective
+
+Handling custom Events in angular
+   the custom events in angular can be handled by using 
+      1 @Output decorator - Component communication
+      2 @EventEmitter class - for definig custom event
+      3 Two component
+         a.Parent Component-Data receiver.
+         b.Child Component-Data sender.
+         c.Here the data is shared by child component to parent component.
+      4 To create a component that handles custom event import
+         import{Component,EventEmitter, Output} from '@angular/core'
+      5 @Output decorator is used to pass the data from child to parent component.
+      6 @Output decorator binds a property of a child component, to send data the data to the parent component.
+      7 @Output binds a property of the type of angular EventEmitter class.
+      8 @EventEmitter class is used to emit the data from child to parent component.
