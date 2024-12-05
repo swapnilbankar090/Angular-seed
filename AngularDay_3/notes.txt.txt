@@ -145,4 +145,19 @@ Handling forms in Angluar
 
    and angulat form whole data was in read in one time or in one object.         
    
-  
+  ***********************************************************************************************
+  5/dec/2024
+               
+   Rotuing in Angluar
+      Routing in Angular is a way to navigate between different views or components in an Angular application
+      Routing is used to navigate between different views or components in an Angular application.
+      Routing is used for navigation based on the request URL.
+      it change the state of the application by loading differnt components based on the request URL
+      navigation is achieved by configuring routes in route configuration file // app.routing.ts
+      to work with routing features,import built-in router module named 'ROUTERMODULE' form @angular/router
+
+      Routing in Angualr- Configure navigation Links
+         roterLink is a directives that is used in acchor<a> tag to Configure navigation link.
+         <router-Outer> - a built-in tag from Angluar RotuerModule asts as placeholder for a component that gets rendered when a navigation link is hit.
+         
+               
