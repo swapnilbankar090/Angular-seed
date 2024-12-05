@@ -117,3 +117,32 @@ Handling custom Events in angular
       6 @Output decorator binds a property of a child component, to send data the data to the parent component.
       7 @Output binds a property of the type of angular EventEmitter class.
       8 @EventEmitter class is used to emit the data from child to parent component.
+
+Handling forms in Angluar
+   1.Template driven forms --- html page handle data
+   2. Model driven  from
+   
+     1 Template driven forms
+       Create a form in html page
+       A template-driven form is the simplest way to bulid a form in Angular
+       As the name suggest all of the form detalis are specifies in component markup file.
+       The entire form get managed in the view template.
+       It uses buil-inform Handling directives that are placed in HTML markq of the form 
+         1. ngForm
+         2. ngModel and
+         3. ngModelGroup
+
+      2 Reactive form/ Model Driven forms
+      Reactive forms(also known as Model-driven forms) are one of the two ways to build Angular forms.4
+      Reactive forms are forms where we define the Structure of the form in the component class 
+         i.e. we create the form model Form Groups and Form Controls
+      In this apporach, the representation of the form is created in the component class.
+      the FOrm field are creates as properties of the component class.
+      this form model is then bound to the HMTL elements.
+
+   difference
+   Normal HTML form in a singlel HTML form read one one attraibute get read
+
+   and angulat form whole data was in read in one time or in one object.         
+   
+  

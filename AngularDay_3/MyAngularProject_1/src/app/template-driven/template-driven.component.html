@@ -1,0 +1,32 @@
+<p>template-driven works!</p>
+
+<div>
+    <form #conatctForm="ngForm" (ngSumbit)="onSubmit(conatctForm)">
+    <p>
+        <label for="lirstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" [(ngModel)]="contact.firstname">
+    </p>
+    <p>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" [(ngModel)]="contact.lastname">
+    </p>
+    <p>
+        <label for="email">Email</label>&nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" id="email" name="emai" placeholder="Enter Email" [(ngModel)]="contact.email">
+    </p>
+    <p>
+        <label for="gender">Gender</label>&nbsp; &nbsp; &nbsp;
+        <input type="radio" id="male" name="gender" value="male" [(ngModel)]="contact.gender">Male
+        <input type="radio" id="female" name="gender" value="female" [(ngModel)]="contact.gender">Female       
+    </p>
+    <p>
+        <label for="isToc">I Agree</label>&nbsp; &nbsp;
+        <input type="checkbox" id="isToc" name="isToc"[(ngModel)]="contact.isToc" >
+    </p>
+    <p>
+        <input type="submit" value="Sumbit">
+    </p>
+</form>
+</div>
+
+<p>{{conatctForm.value|json}}</p>

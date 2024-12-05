@@ -7,10 +7,13 @@ import { EventBindingDemoComponent } from './event-binding-demo/event-binding-de
 import { ParentComponent } from './parent/parent.component';
 import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
 import { CustomeventparentComponent } from './customeventparent/customeventparent.component';
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { RectiveFormComponent } from './rective-form/rective-form.component';
+//EventBindingDemoComponent,ParentComponent,DirectivedemoComponent,CustomeventparentComponent,
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,EventBindingDemoComponent,ParentComponent,DirectivedemoComponent,CustomeventparentComponent],
+  imports: [RouterOutlet,TemplateDrivenComponent,RectiveFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

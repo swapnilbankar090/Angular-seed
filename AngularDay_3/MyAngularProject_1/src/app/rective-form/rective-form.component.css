@@ -1,0 +1,12 @@
+div {
+    /* give design to div */
+    text-align: justify;
+    background: linear-gradient(to bottom, orange, white,  green);
+    border-radius: 20px;
+    width: 30%;
+    margin-left: 35%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    border: 2px solid red;
+}

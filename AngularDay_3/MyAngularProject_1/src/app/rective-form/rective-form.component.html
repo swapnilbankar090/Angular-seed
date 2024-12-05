@@ -1,0 +1,42 @@
+<p>rective-form works!</p>
+<p style="font-size: 30px; font-family: 'Times New Roman', Times, serif; color: black; text-align: center;"> survey form</p>
+
+<div>
+<form [formGroup]="conatctForm" (ngSumbit)="onSubmit()">
+    <p>
+        <label for="lirstname">First Name</label>&nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" formControlName="firstname">
+    </p>
+    <p>
+        <label for="lastname">Last Name</label>&nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" formControlName="lastname">
+    </p>
+    <p>
+        <label for="email">Email</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" id="email" name="emai" placeholder="Enter Email" formControlName="email">
+    </p>
+    <p>
+        <label for="gender">Gender</label>&nbsp; &nbsp; &nbsp;
+        <input type="radio" id="male" name="gender" value="male" formControlName="gender">Male
+        <input type="radio" id="female" name="gender" value="female" formControlName="gender">Female       
+    </p>
+    <p>
+        <label for="isMarried">Married</label>&nbsp; &nbsp;
+        <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried" >
+    </p>
+    <p>
+        <label for="country">Country</label> &nbsp; &nbsp; &nbsp;
+        <select name="country" id="country"  formControlName="country">
+            <option value="india">India</option>
+            <option value="USA">USA</option>
+            <option value="Japan">Japan</option>
+            <option value="France">France</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Sumbit">
+    </p>
+</form>
+</div>
+
+{{conatctForm.value|json}}
