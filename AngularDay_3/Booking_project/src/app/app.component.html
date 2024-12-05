@@ -1,2 +1,14 @@
-<p>fghj</p>
+<ul class="navbar">
+  <li *ngIf="showNavbar"><a routerLink="/hotel">Hotel</a></li>
+  <li *ngIf="showNavbar"><a routerLink="/bus">Bus</a></li>
+  <li *ngIf="showNavbar"><a routerLink="/car">Car</a></li>
+  <li *ngIf="showNavbar"><a routerLink="/train">Train</a></li>
+  <li *ngIf="showNavbar"><a routerLink="/flight">Flight</a></li>
+
+  <!-- Show All button always visible -->
+  <li><button (click)="showAll()" class="show-all-button">
+      {{ showNavbar ? 'Hide All' : 'Show All' }}
+    </button></li>
+</ul>
+
 <router-outlet></router-outlet>
