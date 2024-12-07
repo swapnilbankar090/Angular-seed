@@ -1,0 +1,76 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <!-- First Name Field -->
+    <p>
+        <label for="firstname">First Name</label>
+        <input
+            id="firstname"
+            type="text"
+            name="firstname"
+            [(ngModel)]="contact.firstname"
+            #firstname="ngModel"
+            minlength="3"
+            pattern="^[a-zA-Z]+$"
+            required
+        />
+    </p>
+    <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" style="color: red;">
+        <p *ngIf="firstname.errors?.['required']">First Name is required</p>
+        <p *ngIf="firstname.errors?.['minlength']">Minimum 3 characters required</p>
+        <p *ngIf="firstname.errors?.['pattern']">Only alphabets are allowed</p>
+    </div>
+
+    <!-- Last Name Field -->
+    <p>
+        <label for="lastname">Last Name</label>
+        <input
+            id="lastname"
+            type="text"
+            name="lastname"
+            [(ngModel)]="contact.lastname"
+            #lastname="ngModel"
+            minlength="3"
+            pattern="^[a-zA-Z]+$"
+            required
+        />
+    </p>
+    <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" style="color: red;">
+        <p *ngIf="lastname.errors?.['required']">Last Name is required</p>
+        <p *ngIf="lastname.errors?.['minlength']">Minimum 3 characters required</p>
+        <p *ngIf="lastname.errors?.['pattern']">Only alphabets are allowed</p>
+    </div>
+
+    <!-- Email Field -->
+    <p>
+        <label for="email">Email</label>
+        <input
+            id="email"
+            type="email"
+            name="email"
+            [(ngModel)]="contact.email"
+            #email="ngModel"
+            required
+        />
+    </p>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" style="color: red;">complusry
+        <p *ngIf="email.errors?.['required']">Email is required</p>
+        <p *ngIf="email.errors?.['email']">Enter a valid email address</p>
+    </div>
+
+    <!-- Gender Field -->
+    <p>
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" [(ngModel)]="contact.gender" #gender="ngModel" value="Male" required />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" [(ngModel)]="contact.gender" value="Female" />
+        <label for="female">Female</label>
+    </p>
+    <div *ngIf="gender.invalid && (gender.touched || contactForm.submitted)" style="color: red;">
+        <p>Gender is required</p>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+</form>
+
+<p>Form valid: {{ contactForm.valid }}</p>
+{{contactForm.value |json}}
