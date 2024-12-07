@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student List</h1>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.age }}</td>
+                <td>{{ student.grade }}</td>
+                <td>{{ student.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+<!-- <div class="student-list">
+    <h2>Student List</h2>
+    <ul>
+      <li *ngFor="let student of students">
+        {{ displayStudent(student) }}
+      </li>
+    </ul>
+  </div> -->

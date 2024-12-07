@@ -94,61 +94,59 @@ What is $event?
 *****************************************************
 4/12/24
 
-for communication between 2 component we use @Input and @Output   
-   @Input is used to get data from parent to child component
-   @Output is used to get data from child to parent component
-   in ts file variable shown in html file
+   for communication between 2 component we use @Input and @Output   
+      @Input is used to get data from parent to child component
+      @Output is used to get data from child to parent component
+      in ts file variable shown in html file
 
-Custom directives
-   Custom directives are a way to extend the functionality of HTML elements in Angular.
-   command:- ng g d customdirective
+   Custom directives
+      Custom directives are a way to extend the functionality of HTML elements in Angular.
+      command:- ng g d customdirective
 
-Handling custom Events in angular
-   the custom events in angular can be handled by using 
-      1 @Output decorator - Component communication
-      2 @EventEmitter class - for definig custom event
-      3 Two component
-         a.Parent Component-Data receiver.
-         b.Child Component-Data sender.
-         c.Here the data is shared by child component to parent component.
-      4 To create a component that handles custom event import
-         import{Component,EventEmitter, Output} from '@angular/core'
-      5 @Output decorator is used to pass the data from child to parent component.
-      6 @Output decorator binds a property of a child component, to send data the data to the parent component.
-      7 @Output binds a property of the type of angular EventEmitter class.
-      8 @EventEmitter class is used to emit the data from child to parent component.
+   Handling custom Events in angular
+      the custom events in angular can be handled by using 
+         1 @Output decorator - Component communication
+         2 @EventEmitter class - for definig custom event
+         3 Two component
+            a.Parent Component-Data receiver.
+            b.Child Component-Data sender.
+            c.Here the data is shared by child component to parent component.
+         4 To create a component that handles custom event import
+            import{Component,EventEmitter, Output} from '@angular/core'
+         5 @Output decorator is used to pass the data from child to parent component.
+         6 @Output decorator binds a property of a child component, to send data the data to the parent component.
+         7 @Output binds a property of the type of angular EventEmitter class.
+         8 @EventEmitter class is used to emit the data from child to parent component.
 
-Handling forms in Angluar
-   1.Template driven forms --- html page handle data
-   2. Model driven  from
-   
-     1 Template driven forms
-       Create a form in html page
-       A template-driven form is the simplest way to bulid a form in Angular
-       As the name suggest all of the form detalis are specifies in component markup file.
-       The entire form get managed in the view template.
-       It uses buil-inform Handling directives that are placed in HTML markq of the form 
-         1. ngForm
-         2. ngModel and
-         3. ngModelGroup
+   Handling forms in Angluar
+      1.Template driven forms --- html page handle data
+      2. Model driven  from
+      
+      1 Template driven forms
+         Create a form in html page
+         A template-driven form is the simplest way to bulid a form in Angular
+         As the name suggest all of the form detalis are specifies in component markup file.
+         The entire form get managed in the view template.
+         It uses buil-inform Handling directives that are placed in HTML markq of the form 
+            1. ngForm
+            2. ngModel and
+            3. ngModelGroup
 
-      2 Reactive form/ Model Driven forms
-      Reactive forms(also known as Model-driven forms) are one of the two ways to build Angular forms.4
-      Reactive forms are forms where we define the Structure of the form in the component class 
+         2 Reactive form/ Model Driven forms
+         Reactive forms(also known as Model-driven forms) are one of the two ways to build Angular forms
+         Reactive forms are forms where we define the Structure of the form in the component class 
          i.e. we create the form model Form Groups and Form Controls
-      In this apporach, the representation of the form is created in the component class.
-      the FOrm field are creates as properties of the component class.
-      this form model is then bound to the HMTL elements.
-
-   difference
-   Normal HTML form in a singlel HTML form read one one attraibute get read
-
-   and angulat form whole data was in read in one time or in one object.         
-   
-  ***********************************************************************************************
-  5/dec/2024
-               
-   Rotuing in Angluar
+         In this apporach, the representation of the form is created in the component class.
+         the FOrm field are creates as properties of the component class.
+         this form model is then bound to the HMTL elements.
+            difference
+            Normal HTML form in a singlel HTML form read one one attraibute get read
+            and angulat form whole data was in read in one time or in one object.         
+      
+***********************************************************************************************
+5/dec/2024
+                  
+      Rotuing in Angluar
       Routing in Angular is a way to navigate between different views or components in an Angular application
       Routing is used to navigate between different views or components in an Angular application.
       Routing is used for navigation based on the request URL.
@@ -160,4 +158,107 @@ Handling forms in Angluar
          roterLink is a directives that is used in acchor<a> tag to Configure navigation link.
          <router-Outer> - a built-in tag from Angluar RotuerModule asts as placeholder for a component that gets rendered when a navigation link is hit.
          
+****************************************************************************
+6/dec/2024
+   serives
+      Services are a way to encapsulate the business logic of an application in Angular.
+      Every Application is composed fo a lot of subsystems.
+      these sub systems perform different tasks such as . logging data access , order processing etc.
+      angular helps to create such sub systems by allowing the developers to create Services
+      Services is a broad cateogory encompassing any value, fuction or feature that an application needs
+      a Services is typically a class with a narrow, well-defined purpose
+      it should do a specific tasks that dont invlove the new or application logic
+      Service class can then be consumed in a component that needs the defined business functionality
+      by injeection Service as dependency-di
+      dependency injeection(Di) in angular framework provides components with acceses to required Services and other resources
+
+      command-- ng s Servicesname
+
+      Service can be injected in to component throws serives only
+   ***********************************************************************
+   Introduction to REST 
+      REST (Representational State of Resource) is an architectural style for designing networked applications.
+      REST APIs provide simple, uniform interface beacsue they can be used to make data,content,alogorithms, media, and other digital resources available through web URLs.
+      Essentially, REST APIs are the most comman APIs used across the web today
+      REST works on the HTTP(HyperText Trasfer Protocol)
+      The HTTP Protocol defines serveal methods(called verbs) for determing the action to be performed on a resources.
+   Http Verbs and methods
+      1 GET- mapped to GET verbs of HTTP, reterieves a specified resource
+      2 POST- mapped to POST verbs of HTTP, creates a new resource
+      3 PUT- mapped to PUT verbs of HTTP, updates an existing resource
+      4 DELETE- mapped to DELETE verbs of HTTP, deletes a specified resource
+      Example
+      . For example, the HTTP command GET http://localhost:6500/books* retrieves the Information about all available books.
+      . Technologies used to create REST services 
+         .NET Core, Springlloot, Python, Node JS+Express etc
+
+*********************************************************************** 
+   Consuming Rest API
+      · Angular provides HttpClient class and HttpClientModule that helps in consuming REST API.
+      · These are available in @angular/common/http library
+      · HttpClient is Angular's class that helps communicating with a remote service over HTTP.
+      · To use HttpClient import HttpClientModule module.
+      · The object of HttpClient is used as dependency in any component or Angular service that includ the code to consume REST Service
+   
+   Working with REST Services in Angluar
+      · HttpClient includes .get() to fetch the data from the server.
+      . The get() accepts the URL of the service and
+      . It will return the instance of RxJS Observable.
+      · RxJS Observable - An Observable is a class provided by RxJS JS based library
+      · RxJS (Reactive Extensions for JavaScript) -
+         . The RxJS (Reactive Extensions Library for JavaScript) is a Javascript library that allows us to work with asynchronous data streams.
+         · is a library for reactive programming using Observables that makes it easier to compose asynchronous or callback-
+         . The library also provides utility functions for creating and working with Observables.
+      · RxJS is used to handle asynchronous data streams in Angular.
+
+ *************************************************
+   To install json file 
+   npm install json-server --save-dev
+
+   npm install json-server --save-dev --save
+   *************************************************
+   to run json file
+   npx json-server --watch db.json --port 4500
+
+               JSON Server Setup
+
+               1. Create Directory
+                     
+                     create react app
                
+                                       npx create-react-app my-app
+                                       cd my-app
+
+
+               2. setup JSON Server
+
+
+               cd my-app   
+               mkdir json_data
+               cd json_data-  > npm i -g json-server@0
+
+
+               3. Create JSON file and then Start the JSON server
+
+               npx json-server --watch db.json
+
+               localhost:3000
+
+**********************************************************
+to add json  then import in the provider
+      1 provideAnimations(), 
+      2  provideHttpClient(),
+     in app.config.ts 
+
+ anularmaterial command to install 
+   when project create then add cmd 
+      cd projectname and then ng add @angular/material
+
+*****************************************************************************************
+07/12/2024
+   Validation code 2 way 
+         1.template driven    
+         2.reactive driven
+      
+      
+   

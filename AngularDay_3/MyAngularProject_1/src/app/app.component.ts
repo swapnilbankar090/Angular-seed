@@ -9,11 +9,12 @@ import { DirectivedemoComponent } from './directivedemo/directivedemo.component'
 import { CustomeventparentComponent } from './customeventparent/customeventparent.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { RectiveFormComponent } from './rective-form/rective-form.component';
+import { TestHelloComponent } from './test-hello/test-hello.component';
 //EventBindingDemoComponent,ParentComponent,DirectivedemoComponent,CustomeventparentComponent,
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,TemplateDrivenComponent,RectiveFormComponent],
+  imports: [RouterOutlet,TemplateDrivenComponent,RectiveFormComponent,TestHelloComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
