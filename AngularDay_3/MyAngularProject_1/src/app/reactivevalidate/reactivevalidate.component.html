@@ -1,0 +1,77 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Reactive Form Validation</h1>
+    <form [formGroup]="contactForm" class="p-4 border rounded shadow" (ngSubmit)="onSubmit()">
+        <!-- First Name Field -->
+        <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input
+                type="text"
+                id="firstname"
+                formControlName="firstname"
+                class="form-control"
+            />
+            <!-- Validation Messages -->
+            <div *ngIf="firstname?.invalid && (firstname?.dirty || isSubmitted)" style="color: red;">
+                <p *ngIf="firstname?.errors?.['required']">First Name is required</p>
+                <p *ngIf="firstname?.errors?.['minlength']">Minimum 3 characters required</p>
+                <p *ngIf="firstname?.errors?.['pattern']">Only alphabets are allowed</p>
+            </div>
+        </div>
+
+        <!-- Last Name Field -->
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input
+                type="text"
+                id="lastname"
+                formControlName="lastname"
+                class="form-control"
+            />
+            <!-- Validation Messages -->
+            <div *ngIf="lastname?.invalid && (lastname?.dirty || isSubmitted)" style="color: red;">
+                <p *ngIf="lastname?.errors?.['required']">Last Name is required</p>
+                <p *ngIf="lastname?.errors?.['minlength']">Minimum 3 characters required</p>
+                <p *ngIf="lastname?.errors?.['pattern']">Only alphabets are allowed</p>
+            </div>
+        </div>
+
+        <!-- Gender Field -->
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <div>
+                <input
+                    type="radio"
+                    id="male"
+                    value="Male"
+                    formControlName="gender"
+                />
+                <label for="male" class="me-3">Male</label>
+                <input
+                    type="radio"
+                    id="female"
+                    value="Female"
+                    formControlName="gender"
+                />
+                <label for="female">Female</label>
+            </div>
+            <!-- Validation Messages -->
+            <div *ngIf="gender?.invalid && (gender?.dirty || isSubmitted)" style="color: red;">
+                <p>Gender is required</p>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+                Submit
+            </button>
+        </div>
+    </form>
+
+    <!-- Form Debug -->
+    <div class="mt-4">
+        <h5>Form Debug</h5>
+        <p><strong>Form valid:</strong> {{ contactForm.valid }}</p>
+        <pre>{{ contactForm.value | json }}</pre>
+    </div>
+</div>

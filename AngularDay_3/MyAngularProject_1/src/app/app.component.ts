@@ -11,11 +11,12 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { RectiveFormComponent } from './rective-form/rective-form.component';
 import { TestHelloComponent } from './test-hello/test-hello.component';
 import { TemplatevalidateComponent } from './templatevalidate/templatevalidate.component';
+import { ReactivevalidateComponent } from './reactivevalidate/reactivevalidate.component';
 //EventBindingDemoComponent,ParentComponent,DirectivedemoComponent,CustomeventparentComponent,
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,TemplateDrivenComponent,RectiveFormComponent,TestHelloComponent,TemplatevalidateComponent],
+  imports: [RouterOutlet,TemplateDrivenComponent,RectiveFormComponent,TestHelloComponent,TemplatevalidateComponent,ReactivevalidateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
